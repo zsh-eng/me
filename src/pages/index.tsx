@@ -1,16 +1,14 @@
 import { type NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/react";
-
-import { api } from "~/utils/api";
+import { useState } from "react";
 
 const LinkStyles =
   "text-white text-6xl font-serif font-thin mx-4 py-2 group-hover:opacity-30 hover:!opacity-100 z-10 ease-in duration-200";
 
 const Home: NextPage = () => {
-  const hello = api.example.hello.useQuery({ text: "from tRPC" });
-
+  const [activeIndex, setActiveIndex] = useState(-1);
   return (
     <>
       <Head>
@@ -19,24 +17,50 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen flex-col items-start justify-center bg-gradient-to-r from-[#302b63] to-[#24243e]">
-        <div className="ml-8 group peer z-10 flex flex-col items-stretch justify-center">
-          <Link href="/" className={LinkStyles}>
+        <div className="group peer relative z-10 ml-8 flex flex-col items-stretch justify-center">
+          <Link
+            href="/"
+            className={LinkStyles}
+            data-active-index={0}
+            onMouseOver={() => setActiveIndex(0)}
+          >
             Home
           </Link>
-          <Link href="/" className={LinkStyles}>
+          <Link
+            href="/"
+            className={LinkStyles}
+            onMouseOver={() => setActiveIndex(1)}
+          >
             About Me
           </Link>
-          <Link href="/" className={LinkStyles}>
+          <Link
+            href="/"
+            className={LinkStyles}
+            onMouseOver={() => setActiveIndex(2)}
+          >
+            Blog
+          </Link>
+          <Link
+            href="/"
+            className={LinkStyles}
+            onMouseOver={() => setActiveIndex(3)}
+          >
             Projects
           </Link>
-          <Link href="/" className={LinkStyles}>
-            Coursework
-          </Link>
         </div>
-        <div
-          id="menu-background-pattern"
-          className="absolute z-0 h-screen w-screen bg-pattern bg-pattern-size bg-left-top duration-300 ease-in peer-hover:opacity-50"
-        ></div>
+        <div className="absolute z-0 h-screen w-screen bg-gradient-to-r from-[#302b63] to-[#24243e] opacity-50">
+          Hello
+        </div>
+        <Image
+          alt="pattern"
+          src=""
+          fill
+          className="absolute z-0 opacity-10 duration-300 ease-in peer-hover:opacity-5"
+          style={{
+            backgroundPosition: `0% ${(activeIndex + 1) * -50}%`,
+            backgroundImage: "url('/homepage-pattern.svg')",
+          }}
+        />
       </main>
     </>
   );
