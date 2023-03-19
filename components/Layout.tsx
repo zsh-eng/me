@@ -29,7 +29,7 @@ const Layout = ({ children, activeIndex }: PropsWithChildren<LayoutProps>) => {
         style={{
           backgroundPosition: `center ${40 + (activeIndex + 1) * 5}%`,
           backgroundImage: "url('/homepage-bg.jpg')",
-          backgroundSize: "auto 110vmax",
+          backgroundSize: "auto 130vh",
           backgroundRepeat: "no-repeat",
         }}
       />
