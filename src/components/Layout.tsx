@@ -9,7 +9,7 @@ const Layout = ({ children, activeIndex }: PropsWithChildren<LayoutProps>) => {
   return (
     <main
       className="relative flex min-h-screen flex-col items-start justify-center overflow-hidden bg-base-100 sm:items-center"
-      data-theme="synthwave"
+      data-theme="coffee"
     >
       {children}
     </main>
