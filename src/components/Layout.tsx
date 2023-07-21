@@ -7,7 +7,10 @@ type LayoutProps = {
 
 const Layout = ({ children, activeIndex }: PropsWithChildren<LayoutProps>) => {
   return (
-    <main className="relative flex min-h-screen flex-col items-start justify-center overflow-hidden bg-gradient-to-r from-[#302b63] to-[#24243e] sm:items-center">
+    <main
+      className="relative flex min-h-screen flex-col items-start justify-center overflow-hidden bg-base-100 sm:items-center"
+      data-theme="synthwave"
+    >
       {children}
     </main>
   );

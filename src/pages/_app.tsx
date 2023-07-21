@@ -16,9 +16,13 @@ const MyApp: AppType<{ session: Session | null }> = ({
   const [activeIndex, setActiveIndex] = useState(-1);
 
   return (
-    <SessionProvider session={session} data-theme="dark">
+    <SessionProvider session={session}>
       <Layout activeIndex={activeIndex}>
-        <Component {...pageProps} setActiveIndex={setActiveIndex} activeIndex={activeIndex}/>
+        <Component
+          {...pageProps}
+          setActiveIndex={setActiveIndex}
+          activeIndex={activeIndex}
+        />
       </Layout>
     </SessionProvider>
   );
