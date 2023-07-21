@@ -29,16 +29,16 @@ const CardGrid: React.FC = () => {
   return (
     <div className="grid h-[400px] w-full grid-cols-2 grid-rows-2 items-start gap-2 lg:h-screen lg:w-[600px]">
       <Link className="place-self-end text-left" href="/about">
-        <LinkCard heading="About" src="/../public/person.jpg" />
+        <LinkCard heading="About" src="/person.jpg" />
       </Link>
       <Link className="self-end" href="/">
-        <LinkCard heading="Blog" src="/../public/writing.jpg" />
+        <LinkCard heading="Blog" src="/writing.jpg" />
       </Link>
       <Link className="justify-self-end text-left" href="/">
-        <LinkCard heading="Resume" src="/../public/paper.jpg" />
+        <LinkCard heading="Resume" src="/paper.jpg" />
       </Link>
       <Link href="/">
-        <LinkCard heading="Projects" src="/../public/terminal.png" />
+        <LinkCard heading="Projects" src="/terminal.png" />
       </Link>
     </div>
   );
