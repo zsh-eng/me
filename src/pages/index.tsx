@@ -37,7 +37,7 @@ const CardGrid: React.FC = () => {
       <Link className="justify-self-end text-left" href="/">
         <LinkCard heading="Resume" src="/paper.jpg" />
       </Link>
-      <Link href="/">
+      <Link href="/projects">
         <LinkCard heading="Projects" src="/terminal.png" />
       </Link>
     </div>

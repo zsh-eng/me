@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import { motion } from "framer-motion";
 
-const paragraphStyles = "text-white text-xl leading-relaxed max-w-prose";
+const paragraphStyles = "text-base-content text-xl leading-relaxed max-w-prose";
 
 const About: NextPage = () => {
   const variants = {
@@ -20,16 +20,18 @@ const About: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <motion.section
-        className="mx-2 flex flex-col gap-2 sm:mx-12"
+        className="mx-12 flex flex-col gap-2 px-4 lg:mx-2"
         initial="hidden"
         animate="visible"
         variants={variants}
         transition={{ duration: 0.7 }}
       >
-        <h1 className="mb-4 font-serif text-6xl text-white">Hi there!</h1>
+        <h1 className="mb-4 font-sans text-5xl font-bold text-secondary-content">
+          Hi there!
+        </h1>
         <p className={paragraphStyles}>
-          My name is Zhi Sheng, and I&apos;m a first-year computer science
-          undergraduate at the National University of Singapore.
+          Hi, I&apos;m Zhi Sheng, second-year Computer Science undergraduate at
+          the National University of Singapore.
         </p>
         <p className={paragraphStyles}>
           I have experience working in various areas of web development, from
@@ -37,9 +39,9 @@ const About: NextPage = () => {
           different organisations.
         </p>
         <p className={paragraphStyles}>
-          In my free time, I enjoy exploring the latest web development
-          technologies and experimenting with new tools and techniques to
-          improve my skills.
+          In my free time, I enjoy working on various programming projects to
+          learn new technologies and experiment with different tools and
+          techniques.
         </p>
         <p className={paragraphStyles}>
           Thanks for stopping by and taking the time to learn more about me.
