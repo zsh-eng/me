@@ -2,6 +2,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const paragraphStyles = "text-base-content text-xl leading-relaxed max-w-prose";
 
@@ -26,12 +27,14 @@ const About: NextPage = () => {
         variants={variants}
         transition={{ duration: 0.7 }}
       >
-        <h1 className="mb-4 font-sans text-5xl font-bold text-secondary-content">
-          Hi there!
+        <h2 className="mb-4 font-mono text-3xl font-bold text-secondary-content">
+          Hi there, I&apos;m
+        </h2>
+        <h1 className="mb-4 font-sans text-6xl font-bold text-secondary-content">
+          Zhi Sheng
         </h1>
         <p className={paragraphStyles}>
-          Hi, I&apos;m Zhi Sheng, second-year Computer Science undergraduate at
-          the National University of Singapore.
+          a second-year CS student at the National University of Singapore.
         </p>
         <p className={paragraphStyles}>
           I have experience working in various areas of web development, from
@@ -39,8 +42,11 @@ const About: NextPage = () => {
           different organisations.
         </p>
         <p className={paragraphStyles}>
-          In my free time, I enjoy working on various programming projects to
-          learn new technologies and experiment with different tools and
+          In my free time, I enjoy working on various programming{" "}
+          <Link className="underline" href="/projects">
+            projects
+          </Link>{" "}
+          to learn new technologies and experiment with different tools and
           techniques.
         </p>
         <p className={paragraphStyles}>
