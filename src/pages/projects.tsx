@@ -91,7 +91,6 @@ const Projects: NextPage = () => {
         <Project
           heading="CloudWeGo API Gateway"
           url="https://github.com/tim-pipi/cloudwego-api-gateway"
-          image="/projects/nusc.png"
           alt="CloudWeGo API Gateway"
         >
           <ul className="list-disc pl-6 text-lg lg:w-[600px]">
@@ -110,7 +109,6 @@ const Projects: NextPage = () => {
         <Project
           heading="Obsidian Definitions"
           url="https://github.com/zsh-eng/obsidian-definitions"
-          image="/projects/nusc.png"
           alt="Obsidian Definitions"
         >
           <ul className="list-disc pl-6 text-lg lg:w-[600px]">
