@@ -1,44 +1,35 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 
 type LinkCardProps = {
   heading: string;
-  src: string;
 };
 
-const LinkCard: React.FC<LinkCardProps> = ({ heading, src }) => {
+const LinkCard: React.FC<LinkCardProps> = ({ heading }) => {
   return (
-    <div className="hover:bg-primary-secondary group relative flex h-28 w-48 flex-col justify-center gap-2 bg-secondary px-8 py-4 transition-all duration-300 hover:h-36 hover:w-60">
+    <div className="group relative flex h-28 w-48 flex-col justify-center gap-2 bg-secondary-focus px-8 py-4 transition-all duration-300 hover:h-36 hover:w-60 hover:bg-secondary">
       <h2 className="z-10 w-full text-left text-4xl font-semibold text-secondary-content">
         {heading}
       </h2>
-      <Image
-        src={src}
-        alt="keyboard"
-        className="absolute z-0 scale-90 bg-cover opacity-0 duration-300 group-hover:scale-100 group-hover:opacity-10"
-        fill
-        style={{ objectFit: "cover" }}
-      />
     </div>
   );
 };
 
 const CardGrid: React.FC = () => {
   return (
-    <div className="grid h-[400px] w-full grid-cols-2 grid-rows-2 items-start gap-2 lg:h-screen lg:w-[600px]">
+    <div className="grid h-[600px] w-full grid-cols-2 grid-rows-2 items-start gap-2 lg:w-[600px]">
       <Link className="place-self-end text-left" href="/about">
-        <LinkCard heading="About" src="/person.jpg" />
+        <LinkCard heading="About" />
       </Link>
       <Link className="self-end" href="/">
-        <LinkCard heading="Blog" src="/writing.jpg" />
+        <LinkCard heading="Blog" />
       </Link>
-      <Link className="justify-self-end text-left" href="/">
-        <LinkCard heading="Resume" src="/paper.jpg" />
+      <Link className="justify-self-end text-left" href="/resume">
+        <LinkCard heading="Resume" />
       </Link>
       <Link href="/projects">
-        <LinkCard heading="Projects" src="/terminal.png" />
+        <LinkCard heading="Projects" />
       </Link>
     </div>
   );
